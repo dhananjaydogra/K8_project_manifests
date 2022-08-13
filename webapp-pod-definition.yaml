@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: simple-webapp-mysql
+  namespace: final
   labels:
     app: example-app
     name: simple-webapp-mysql
