@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-s3-config
+  namespace: final
+data:
+  Name: Dhananjay Dogra
+  Bucket: ddogra1-test
+  IMG_URL: https://ddogra1-test.s3.amazonaws.com/clo835/config/image.png
