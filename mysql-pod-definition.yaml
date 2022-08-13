@@ -14,3 +14,10 @@ spec:
     env:
       - name: MYSQL_ROOT_PASSWORD
         value: paswrd
+    volumeMounts:
+    - mountPath: /var/lib/mysql
+      name: sql-data
+  volumes:
+    - name: sql-data
+      persistentVolumeClaim:
+        claimName: mysql-pvc
