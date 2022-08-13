@@ -21,15 +21,11 @@ spec:
     envFrom:
       - secretRef:
           name: app-secret
+      - configMapRef:
+          name: app-s3-config
     env:
     - name: DB_Database
       value: mysql
-    - name: IMG_URL
-      value: s3://ddogra1-test/image.png
-    - name: Bucket
-      value: ddogra1-test
-    - name: Name
-      value: Dhananjay
   volumes:
     - name: app-secret-volumes
       secret:
