@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  namespace: final
+  labels:
+    name: webapp-deployment
+spec:
+  selector:
+    matchLabels:
+      name: simple-webapp-mysql
+  replicas: 1
+  template:
+    metadata:
+      namespace: final
+      labels:
+        app: ddogra1-app
+        name: simple-webapp-mysql
+    spec:
+      #serviceAccountName: clo835
+      containers:
+      - name: simple-webapp-mysql
+        image: 951409759672.dkr.ecr.us-east-1.amazonaws.com/ddogra1-test:TEST_7f27ced74393281d540d6fdc925f3ba4ab4747e9
+        ports:
+        - containerPort: 81
+        volumeMounts:
+        - name: app-secret-volumes
+          mountPath: "/opt/app-secret-volumes"
+          readOnly: true
+        envFrom:
+          - secretRef:
+              name: app-secret
+          - configMapRef:
+              name: app-s3-config
+      volumes:
+        - name: app-secret-volumes
+          secret:
+            secretName: app-secret
