@@ -7,11 +7,10 @@ metadata:
     app: example-app
     name: simple-webapp-mysql
 spec:
-  serviceAccountName: clo835
+  #serviceAccountName: clo835
   containers:
   - name: simple-webapp-mysql
-    #image: kodekloud/simple-webapp-mysql:v10
-    image: 951409759672.dkr.ecr.us-east-1.amazonaws.com/ddogra1-test:TEST_af60d754659db5c9227b8cf07017e8e0909cca3d
+    image: 951409759672.dkr.ecr.us-east-1.amazonaws.com/ddogra1-test:TEST_7f27ced74393281d540d6fdc925f3ba4ab4747e9
     ports:
     - containerPort: 81
     volumeMounts:
@@ -23,9 +22,6 @@ spec:
           name: app-secret
       - configMapRef:
           name: app-s3-config
-    env:
-    - name: DB_Database
-      value: mysql
   volumes:
     - name: app-secret-volumes
       secret:
