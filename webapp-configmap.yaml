@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-s3-config
+  namespace: final
+data:
+  # Variable which will show up on the frontend
+  Name: Dhananjay Dogra
+  #Name of your S3 Bucket
+  Bucket: ddogra1-final-bucket
+  #URL of the S3 bucket image which will show up as the background of the application
+  IMG_URL: https://ddogra1-final-bucket.s3.amazonaws.com/clo835/config/image.png
+  #Name of the database to which you wish to connect in mysql
+  DB_Database: sys
