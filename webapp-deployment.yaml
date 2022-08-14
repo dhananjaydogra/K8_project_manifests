@@ -17,10 +17,10 @@ spec:
         app: ddogra1-app
         name: simple-webapp-mysql
     spec:
-      #serviceAccountName: clo835
+      serviceAccountName: clo835
       containers:
       - name: simple-webapp-mysql
-        image: 951409759672.dkr.ecr.us-east-1.amazonaws.com/ddogra1-test:TEST_7f27ced74393281d540d6fdc925f3ba4ab4747e9
+        image: 951409759672.dkr.ecr.us-east-1.amazonaws.com/ddogra1-finalproject:WEBAPP_2c9a05a64eceae7b974851370b2de9bc81540d9f
         ports:
         - containerPort: 81
         volumeMounts:
