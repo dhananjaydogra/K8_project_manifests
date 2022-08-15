@@ -9,6 +9,6 @@ data:
   #Name of your S3 Bucket
   Bucket: ddogra1-final-bucket
   #URL of the S3 bucket image which will show up as the background of the application
-  IMG_URL: https://ddogra1-final-bucket.s3.amazonaws.com/clo835/config/image.png
+  IMG_URL: https://ddogra1-final-bucket.s3.amazonaws.com/clo835/config/image3.png
   #Name of the database to which you wish to connect in mysql
   DB_Database: sys
