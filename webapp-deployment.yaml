@@ -25,9 +25,9 @@ spec:
         - containerPort: 81
         resources:
           limits:
-            cpu: 100m
+            cpu: 500m
           requests:
-            cpu: 50m
+            cpu: 200m
         volumeMounts:
         - name: app-secret-volumes
           mountPath: "/opt/app-secret-volumes"
